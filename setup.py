@@ -5,7 +5,7 @@ setup(
     name="nlse",
     version="0.1",
     description=(
-        "The simulation and the plotting codes for simulating pulse "
+        "The ODE solver and the plotting code for simulating pulse "
         "propagation in systems governed by a Generalized Nonlinear "
         "Schrödinger Equation (GNLSE)"),
     author="Ivan Oreshnikov",
