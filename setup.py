@@ -17,5 +17,12 @@ setup(
         "numpy==1.19.1",
         "scipy==1.5.2"
     ],
-    scripts=[]
+    scripts=[],
+    # ^^^ in here one can list the scripts that should be available as
+    # stand-alone commands when the package is installed.
+    entry_points={
+        "console_scripts": [
+            "nlse-demo-collision=nlse.demos:soliton_collision"
+        ]
+    }
 )
