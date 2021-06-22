@@ -10,6 +10,38 @@ from nlse.helpers import sech
 logging.basicConfig(level=logging.DEBUG)
 
 
+def dispersive_spread():
+    """
+    This simulation demonstrates how an linear wave spreads under dispersion.
+    """
+
+    def sod(f):
+        return -1/2 * f**2
+
+    def gamma(f):
+        return 1
+
+    def kerr(t, x, u):
+        return abs(u)**2 * u
+
+    t = numpy.linspace(0, 20, 2**9)
+    x = numpy.linspace(-20, +20, 2**10)
+
+    u0 = 0.5 * sech(x)
+    result = gnlse(t, x, u0, sod, gamma, kerr)
+
+    plt.figure(figsize=(4, 6))
+
+    plt.pcolormesh(
+        x, t, abs(result.u),
+        cmap="magma")
+    plt.xlabel(r"Coordinate $x$, a.u.")
+    plt.ylabel(r"Time $t$, a.u.")
+    plt.tight_layout()
+
+    plt.show()
+
+
 def soliton_collision():
     """
     This simulation demonstrates collision of two solitons in a classic NLSE.

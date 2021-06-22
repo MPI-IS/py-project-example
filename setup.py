@@ -17,7 +17,10 @@ setup(
         "numpy==1.19.1",
         "scipy==1.5.2"
     ],
-    scripts=[],
+
+    scripts=[
+        "bin/nlse-demo-dispersion"
+    ],
     # ^^^ in here one can list the scripts that should be available as
     # stand-alone commands when the package is installed.
     entry_points={
@@ -25,4 +28,5 @@ setup(
             "nlse-demo-collision=nlse.demos:soliton_collision"
         ]
     }
+    # ^^^ this is a more light-weight version of the same
 )

@@ -1,0 +1,5 @@
+#!/usr/bin/env python3
+
+
+from nlse.demos import dispersive_spread
+dispersive_spread()
