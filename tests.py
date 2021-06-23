@@ -3,9 +3,9 @@ from unittest import TestCase
 from matplotlib import pyplot as plt
 import numpy
 
-from .helpers import sech
-from .plotter import plot_simulation_results
-from .solver import gnlse
+from nlse.helpers import sech
+from nlse.plotter import plot_simulation_results
+from nlse.solver import gnlse
 
 
 class SolitonTestCase(TestCase):
