@@ -10,7 +10,7 @@ This project requires `python >= 3.5`.
 
 You can perform a user-specific installation by running
 
-    $ python -m pip install -e .
+    $ python -m pip install .
 
 from the root of the project. We strongly advise an installation in a virtual environment. You can create and activate one by executing the following two commands from the root of the project
 
@@ -18,6 +18,10 @@ from the root of the project. We strongly advise an installation in a virtual en
     $ . venv/bin/activate
 
 and then performing the installation as usual by running
+
+    (venv) $ python -m pip install .
+
+If you plan to extend the code, then you should perform an editable installation with
 
     (venv) $ python -m pip install -e .
 
